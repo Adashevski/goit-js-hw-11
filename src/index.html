@@ -4,11 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <div class="gallery"></div>
+    <button type="button" class="load-more hidden">Load more</button>
+    <div class="placeholder"></div>
+    <footer class="footer">
+      <p>API from:</p>
+      <a href="https://pixabay.com/" target="_blank" rel="noreferrer noopener">
+        <img
+          src="https://pixabay.com/static/img/logo.png"
+          height="24"
+          width="auto"
+          alt="pixabay logo"
+      /></a>
+    </footer>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

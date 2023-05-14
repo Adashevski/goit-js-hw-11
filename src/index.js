@@ -80,11 +80,11 @@ const searchImg = async event => {
   limitReached = false;
   searchValue = event.target[0].value;
   clearGallery();
+  disableBtn();
 
   try {
     const arr = await fetchImg(searchValue);
     if (arr.hits.length === 0) {
-      disableBtn();
       Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );

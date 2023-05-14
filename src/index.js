@@ -102,7 +102,7 @@ const searchImg = async event => {
 
 const loadMore = async () => {
   try {
-    const { hits, totalHits } = await fetchImg(currentSearchValue, page);
+    const { hits, totalHits } = await fetchImg(searchValue, page);
     buildGallery(hits);
     page++;
     limitReached = page * limitPerPage > totalHits;
